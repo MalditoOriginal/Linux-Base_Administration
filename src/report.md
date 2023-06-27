@@ -5,7 +5,7 @@ Install Ubuntu 20.04 Server LTS without GUI
 
 `$ cat /etc/issue`
 
-![linux](src/images/linux1_1.png)
+![linux](/src/src/images/linux1_1.png)
 
 
 ## Part 2. Creating a user
@@ -15,13 +15,13 @@ Create a user other than the one created during installation. The user must be a
 
 `$ sudo adduser alex`
 
-![linux](src/images/linux2_1.png)
+![linux](/src/src/images/linux2_1.png)
 
 - 2.2 The new user must be in the output of the command:
 
 `$ cat /etc/passwd`
 
-![linux](src/images/linux2_2.png)
+![linux](/src/src/images/linux2_2.png)
 
 - 2.3 The user must be added to adm group.
 
@@ -39,7 +39,7 @@ CHECK!!!
 
 `$ hostnamectl`
 
-![linux](src/images/linux3_1.png)
+![linux](/src/src/images/linux3_1.png)
 
 - 3.2 Output the names of the network interfaces using a console command
 
@@ -47,13 +47,13 @@ CHECK!!!
 
 `$ timedatectl`
 
-![linux](src/images/linux3_2.png)
+![linux](/src/src/images/linux3_2.png)
 
 - 3.3 Output the names of the network interfaces using a console command.
 
 `$ ip -br link show`
 
-![linux](src/images/linux3_3.png)
+![linux](/src/src/images/linux3_3.png)
 
     In the report give an explanation for the presence of the lo interface.
 
@@ -63,7 +63,7 @@ lo (loopback device) – виртуальный интерфейс, присут
 
 `$ ip address show`
 
-![linux](src/images/linux3_4.png)
+![linux](/src/src/images/linux3_4.png)
 
     Decode DHCP in the report.
 
@@ -73,11 +73,11 @@ DHCP (Dynamic Host Configuration Protocol) is a network management protocol used
 
 `$ curl curlmyip.ru`
 
-![linux](src/images/linux3_5_0.png)
+![linux](/src/src/images/linux3_5_0.png)
 
 `$ ip route`
 
-![linux](src/images/linux3_5_1.png)
+![linux](/src/src/images/linux3_5_1.png)
 
 - 3.6 Set static (manually set, not received from DHCP server) ip, gw, dns settings (use public DNS servers, e.g. 1.1.1.1 or 8.8.8.8).
 
@@ -85,13 +85,13 @@ Change to static.
 
 `$ sudo vim /etc/netplan/00-installer-config.yaml`
 
-![linux](src/images/linux3_6.png)
+![linux](/src/src/images/linux3_6.png)
 
 `$ sudo netplan apply` - apply new configuration
 
-![linux](src/images/linux3_6_1.png)
+![linux](/src/src/images/linux3_6_1.png)
 
-![linux](src/images/linux3_6_2.png)
+![linux](/src/src/images/linux3_6_2.png)
 
 - 3.7 Reboot the virtual machine. Make sure that the static network settings (ip, gw, dns) correspond to those set in the previous point.
 
@@ -99,17 +99,17 @@ Change to static.
 
 `$ cat /etc/netplan/00-installer-config.yaml`
 
-![linux](src/images/linux3_7_0.png)
+![linux](/src/src/images/linux3_7_0.png)
 
     Successfully ping 1.1.1.1 and ya.ru remote hosts and add a screenshot of the output command to the report. There should be "0% packet loss" phrase in command output.
 
 `$ ping 1.1.1.1`
 
-![linux](src/images/linux3_7_1.png)
+![linux](/src/src/images/linux3_7_1.png)
 
 `$ ping ya.ru`
 
-![linux](src/images/linux3_7_2.png)
+![linux](/src/src/images/linux3_7_2.png)
 
 
 ## Part 4. OS Update
@@ -118,7 +118,7 @@ Change to static.
 
  `$ sudo apt-get dist-upgrade`
 
- ![linux](src/images/linux4.png)
+ ![linux](/src/src/images/linux4.png)
  
 
 ## Part 5. Using the sudo command
@@ -129,7 +129,7 @@ Change to static.
 
 `$ hostnamectl`
 
- ![linux](src/images/linux5.png)
+ ![linux](/src/src/images/linux5.png)
 
  sudo is a program for Unix-like computer operating systems that enables users to run programs with the security privileges of another user, by default the superuser.
 
